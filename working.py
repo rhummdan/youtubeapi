@@ -21,7 +21,7 @@ def random_video():
             part="snippet",
             type="video",
             order="viewCount",  # Sort videos by view count
-            maxResults=5,
+            maxResults=50,
             #regionCode="US",  # Number of videos to fetch
             videoCategoryId=20
         )
