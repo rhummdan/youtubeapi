@@ -45,6 +45,7 @@ def random_video():
         return {
             "title": video_title,
             "views": video_views,
+            "video_id": video_id
         }
     except Exception as e:
         return {"error":str(e)}
