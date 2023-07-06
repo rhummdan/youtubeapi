@@ -13,7 +13,7 @@ youtube = build("youtube", "v3", developerKey=API_KEY)
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/videodetails")
 def random_video():
     try:
         # Search for YouTube videos
