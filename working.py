@@ -13,7 +13,7 @@ youtube = build("youtube", "v3", developerKey=API_KEY)
 
 
 app = FastAPI()
-
+# fixing blocked by cors policy
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Update with the appropriate origins
