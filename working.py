@@ -3,6 +3,7 @@ from googleapiclient.discovery import build
 import random
 import os
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
 load_dotenv()
 
 # using the api key from the Youtube Data API v3 credentials
@@ -12,6 +13,13 @@ youtube = build("youtube", "v3", developerKey=API_KEY)
 
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Update with the appropriate origins
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
 
 @app.get("/videodetails")
 def random_video():
