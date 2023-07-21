@@ -30,8 +30,8 @@ def random_video():
             type="video",
             order="viewCount",  # Sort videos by view count
             maxResults=50,
-            #regionCode="US",  # Number of videos to fetch
-            videoCategoryId=20
+            regionCode="US", 
+            #videoCategoryId=20
         )
         response = request.execute()
         video_items = response["items"]
